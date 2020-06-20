@@ -18,10 +18,8 @@ The following libraries are required: APE and GEIGER.
 – n_sim: that is the number of simulations to run. Default = 1000.
 - tail_test: "one_tail" (default) or "two tail".
 
-'''
+```
 pybus_harvey (tree, lambda = 0.25, mu = 0, n_taxa = length(tree$tip.label), n_taxa_drop = 0, n_sim = 1000, tail_test = "one_tail")
-
-'''
-
+```
 
 
