@@ -18,7 +18,7 @@ test$p.value
 
 
 ## Plotting the results:
-### When plot the simulated gamma values, make sure to adjust the range x-axis to allow plotting the gamma value you estimated for your tree.
+### When plotting the simulated gamma values, make sure to adjust the range x-axis to allow plotting the gamma value you estimated for your tree.
 
 hist(test$sim.gamma,  xlim=c(-4,4), xlab="Gamma Statistic", main=NULL)
 abline(v = test$gamma, lty = 2, col = "red")
