@@ -4,9 +4,9 @@ In macroevolutionary studies, one can ask if a certain lineage has diversified u
 
 Roughly, a negative gamma value indicate that inter-node distances between the root and the midpoint are shorter than the distances between the midpoint and the tips, and hence, most branching events occurred earlier in the evolutionary history of the clade. This kind of pattern can be recovered because the lineage might have experienced a decline in the rate of species accumulation over time, which can be consistent to an ‘early burst’ model of diversification. 
 
-To test if the estimated gamma value of a phylogenetic tree is is lower or greater than expected, we can simulate values of gamma can using the gammaStat function of the APE package in R (Paradis et al. 2004). It is recommended to simulate null distributions for the gamma statistic using the MCCR test (Pybus and Harvey 2000) to avoid bias towards negative values due to incomplete taxonomic sampling. Therefore, one can inform the fraction of the diversity of the given lineage is represented in the tree, and automatically the fraction that is missing.
+To test if the estimated gamma value of a phylogenetic tree is is lower or greater than expected, we can simulate values of gamma using the gammaStat function of the APE package in R (Paradis et al. 2004). It is recommended to simulate null distributions for the gamma statistic using the MCCR test (Pybus and Harvey 2000) to avoid bias towards negative values due to incomplete taxonomic sampling. Therefore, one can inform the fraction of the diversity of the given lineage is represented in the tree, and automatically the fraction that is missing.
 
-Here there is a very simple function in R that calculates and simulates  Pybus-Harvey gamma statistic for a given tree.
+Here there is a simple function in R that calculates and simulates Pybus-Harvey gamma statistic for a given tree.
 The following libraries are required: APE and GEIGER. 
 
 ## Here is what you will neet to input in the function:
@@ -21,5 +21,9 @@ The following libraries are required: APE and GEIGER.
 ```
 pybus_harvey (tree, lambda = 0.25, mu = 0, n_taxa = length(tree$tip.label), n_taxa_drop = 0, n_sim = 1000, tail_test = "one_tail")
 ```
+
+
+See 'Plot_simulated_pybus_harvey.R' for an alternative way to plot the results.
+See 'lambda_mu_estimation.R' for an alternative way to estimate lambda and mu.
 
 
